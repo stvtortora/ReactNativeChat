@@ -36,3 +36,4 @@ Selected:
 - Prevent autoscroll if scrolled upwards viewing history (exception - when you send a new message)
 - Add speech bubble image behind each chat message
 - Add styling to show different colors for your message or theirs
+- Update styles to fix for iPhone X
