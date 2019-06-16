@@ -7,10 +7,12 @@ class ChatLog extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      atBottom: true
+      atBottom: true,
+      height: 60
     }
     this.chatMessage = this.chatMessage.bind(this)
     this.handleNewMessage = this.handleNewMessage.bind(this)
+    this.handleScrollEnd = this.handleScrollEnd.bind(this)
     this.setAtBottomStatus = this.setAtBottomStatus.bind(this)
   }
 
@@ -35,7 +37,6 @@ class ChatLog extends React.Component {
   }
 
   setAtBottomStatus (newStatus) {
-    'yellow'
     this.setState({
       atBottom: newStatus
     })
@@ -52,6 +53,7 @@ class ChatLog extends React.Component {
       renderItem={this.chatMessage}
       onContentSizeChange={this.handleNewMessage}
       onScrollBeginDrag={() => this.setAtBottomStatus(false)}
+      onEndReached={() => this.setAtBottomStatus(true)}
       />
     )
   }

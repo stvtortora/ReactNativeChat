@@ -42,7 +42,7 @@ class MessageInput extends React.Component {
         editable={true}
         multiline={true}
         onChangeText={this.handleChange('message')}
-        onContentSizeChange={this.growInput}/>
+        onContentSizeChange={this.growInput()}/>
         <Button style={styles.sendButton} onPress={this.addMessage} title='Send'></Button>
       </View>
     )

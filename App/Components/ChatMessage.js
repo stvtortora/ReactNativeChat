@@ -53,12 +53,18 @@ const styles = StyleSheet.create({
   receivedMessage: {
     paddingRight: '25%',
   },
+  roundedProfileImage: {
+    width:50, height:50, borderWidth:3, margin: 6,
+    borderColor:'black', borderRadius:25
+  },
   bubble: {
     flex: 1,
     borderRadius: 14,
     padding: 10,
-    width: 'auto',
-    maxWidth: '80%'
+    width: '100%',
+    maxWidth: '80%',
+    justifyContent: 'center',
+    flexDirection: 'row'
   },
   sentBubble: {
     backgroundColor: 'grey'
@@ -66,11 +72,7 @@ const styles = StyleSheet.create({
   receivedBubble: {
     backgroundColor: '#1084ff'
   },
-  text: { flex: 1, flexWrap: 'wrap' },
-  roundedProfileImage: {
-    width:50, height:50, borderWidth:3, margin: 6,
-    borderColor:'black', borderRadius:25
-  }
+  text: { flex: 1, flexWrap: 'wrap', alignSelf: 'center'}
 })
 
 ChatMessage.propTypes = {
