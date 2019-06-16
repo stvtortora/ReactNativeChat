@@ -3,9 +3,9 @@ import { FlatList } from 'react-native'
 import PropTypes from 'prop-types'
 import ChatMessage from './ChatMessage'
 
-const ChatLog = ({ chats }) => {
+const ChatLog = ({ chats, currentUser }) => {
   const renderChatMessage = ({item, index}) => {
-    return <ChatMessage chatMessage={item} />
+    return <ChatMessage chatMessage={item} isCurrentUserMessage={item.user_email === currentUser}/>
   }
 
   return (

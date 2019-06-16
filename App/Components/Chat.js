@@ -8,7 +8,7 @@ export default () => {
 
   return (
     <View style={{flex: 1, flexDirection:'column', width: '100%'}}>
-      <ConnectedChatLog/>
+      <ConnectedChatLog user_email={user_email}/>
       <MessageInput user_email={user_email}/>
     </View>
   )
