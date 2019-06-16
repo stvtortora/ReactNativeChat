@@ -4,8 +4,6 @@ import PropTypes from 'prop-types'
 import ChatMessage from './ChatMessage'
 
 const ChatLog = ({ chats }) => {
-  let i = 0
-
   const renderChatMessage = ({item, index}) => {
     return <ChatMessage chatMessage={item} />
   }

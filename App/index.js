@@ -4,7 +4,7 @@ import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
 import createSagaMiddleware from 'redux-saga'
 
-import ConnectedChatLog from './Containers/ConnectedChatLog'
+import Chat from './Components/Chat'
 import SimpleChatApp from './Reducers'
 import SimpleChatSaga from './Sagas'
 
@@ -21,7 +21,7 @@ export default class App extends React.Component {
     return (
       <Provider store={store}>
         <View style={styles.container}>
-           <ConnectedChatLog />
+           <Chat />
          </View>
       </Provider>
     )

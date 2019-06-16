@@ -10,6 +10,7 @@ const chat = (state = defaultState, action) => {
   switch (action.type) {
     case 'ADD_MESSAGE':
       let { user_email, message } = action;
+      
       return [
         ...state,
         {
