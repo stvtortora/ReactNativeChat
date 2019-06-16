@@ -10,8 +10,8 @@ const ChatMessage = ({ chatMessage }) => {
                     }).replace('http', 'https')
 
   return (
-    <View style={{flex: 1, flexDirection:'row', justifyContent: 'center', height: '100%', minHeight: 60, width: 'auto', padding: 20}}>
-      <Text style={{flex: 1, flexWrap: 'wrap', maxWidth: '80%'}}>{chatMessage.message}</Text>
+    <View style={styles.viewBox}>
+      <Text style={styles.text}>{chatMessage.message}</Text>
       <Image style={styles.roundedProfileImage}
              source={{uri: avatarUrl}} />
     </View>
@@ -19,6 +19,11 @@ const ChatMessage = ({ chatMessage }) => {
 }
 
 const styles = StyleSheet.create({
+  viewBox: {
+    flex: 1, flexDirection:'row', justifyContent: 'center',
+    height: '100%', minHeight: 60, width: 'auto', padding: 20
+  },
+  text: { flex: 1, flexWrap: 'wrap', maxWidth: '80%' },
   roundedProfileImage: {
     width:50, height:50, borderWidth:3,
     borderColor:'black', borderRadius:25
