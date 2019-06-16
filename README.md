@@ -4,7 +4,7 @@ Try adding as many as these features as you can manage:
 - Use FlatList to display messages
 - Make messages grow for larger text
 - Add Text Field on button to enter chat messages into the chat
-- Align your messages to the right and everyone else to the left *
+- Align your messages to the right and everyone else to the left
 - Group username headers so if the same person chats multiple times in a row it only shows once
 - Add date like username is listed (grouped as above)
 - Add multiple "Chat Channels" and a intro screen with a list of channels and the option to create a new one (new ones will have fake users added)
@@ -22,3 +22,17 @@ Try adding as many as these features as you can manage:
 
 Bonus:
 - Add Typescript
+
+Selected:
+
+- Update to ES6 Classes instead of function components
+- Use FlatList to display messages
+- Make messages grow for larger text
+- Add Text Field on button to enter chat messages into the chat
+- Align your messages to the right and everyone else to the left
+- Group username headers so if the same person chats multiple times in a row it only shows once
+- Autogrow text input when adding new entries
+- Autoscroll to bottom when new message arrives
+- Prevent autoscroll if scrolled upwards viewing history (exception - when you send a new message)
+- Add speech bubble image behind each chat message
+- Add styling to show different colors for your message or theirs
