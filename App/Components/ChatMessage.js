@@ -10,7 +10,7 @@ const ChatMessage = ({ chatMessage }) => {
                     }).replace('http', 'https')
 
   return (
-    <View style={{flex: 1, flexDirection:'row', alignSelf: 'flex-end', height: 60, maxHeight: 60}}>
+    <View style={{flex: 1, flexDirection:'row', alignSelf: 'flex-end', height: '100%', minHeight: 60}}>
       <Text>{chatMessage.message}</Text>
       <Image style={styles.roundedProfileImage}
              source={{uri: avatarUrl}} />
