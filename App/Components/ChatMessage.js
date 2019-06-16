@@ -11,12 +11,12 @@ const ChatMessage = ({ chatMessage, isSentMessage, showAvatar }) => {
                         email: chatMessage.user_email,
                         parameters: { size: "50", "d": "monsterid"},
                       }).replace('http', 'https')
-    return <Image style={styles.roundedProfileImage} source={{uri: avatarUrl}} />
+    return <Image key={0} style={styles.roundedProfileImage} source={{uri: avatarUrl}} />
   }
 
   const bubble = () => {
     return (
-      <View style={[styles.bubble, isSentMessage ? styles.sentBubble : styles.receivedBubble]}>
+      <View key={1} style={[styles.bubble, isSentMessage ? styles.sentBubble : styles.receivedBubble]}>
         <Text style={styles.text}>{chatMessage.message}</Text>
       </View>
     )

@@ -12,7 +12,6 @@ class ChatLog extends React.Component {
     }
     this.chatMessage = this.chatMessage.bind(this)
     this.handleNewMessage = this.handleNewMessage.bind(this)
-    this.handleScrollEnd = this.handleScrollEnd.bind(this)
     this.setAtBottomStatus = this.setAtBottomStatus.bind(this)
   }
 
@@ -21,6 +20,7 @@ class ChatLog extends React.Component {
     const user_email = item.user_email
 
     return <ChatMessage
+    key={`chat${index}`}
     chatMessage={item}
     showAvatar={index === chats.length - 1 || chats[index + 1].user_email !== user_email}
     isSentMessage={user_email === currentUser}/>
