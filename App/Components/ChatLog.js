@@ -5,7 +5,12 @@ import ChatMessage from './ChatMessage'
 
 const ChatLog = ({ chats, currentUser }) => {
   const renderChatMessage = ({item, index}) => {
-    return <ChatMessage chatMessage={item} isCurrentUserMessage={item.user_email === currentUser}/>
+    const user_email = item.user_email
+    console.log(user_email === currentUser)
+    return <ChatMessage
+    chatMessage={item}
+    showAvatar={index === chats.length - 1 || chats[index + 1].user_email !== user_email}
+    isSentMessage={user_email === currentUser}/>
   }
 
   return (

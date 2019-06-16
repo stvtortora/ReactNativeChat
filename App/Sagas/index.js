@@ -2,11 +2,12 @@ import { put, delay, } from 'redux-saga/effects'
 import lorem from 'lorem-ipsum-react-native'
 
 const emails = [
-  'a@b.com',
-  'test@rehashstudio.com',
-  'steve@jobs.com',
-  'hello@world.com',
-  'foo@bar.com',
+  'a'
+  // 'a@b.com',
+  // 'test@rehashstudio.com',
+  // 'steve@jobs.com',
+  // 'hello@world.com',
+  // 'foo@bar.com',
 ]
 
 function* addChatsSaga() {
