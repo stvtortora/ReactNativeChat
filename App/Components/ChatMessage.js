@@ -5,7 +5,7 @@ import GravatarApi from 'gravatar-api'
 
 const ChatMessage = ({ chatMessage, isSentMessage, showAvatar }) => {
   const avatar = () => {
-    if (!showAvatar) { return <View style={{width: 62}}/> }
+    if (!showAvatar) { return <View key={0} style={{width: 62}}/> }
 
     const avatarUrl = GravatarApi.imageUrl({
                         email: chatMessage.user_email,
@@ -77,6 +77,8 @@ const styles = StyleSheet.create({
 
 ChatMessage.propTypes = {
   chatMessage: PropTypes.object.isRequired,
+  isSentMessage: PropTypes.bool.isRequired,
+  showAvatar: PropTypes.bool.isRequired
 }
 
 export default ChatMessage

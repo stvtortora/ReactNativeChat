@@ -5,21 +5,23 @@ import { connect } from 'react-redux'
 class MessageInput extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {
+    this.defaultState = {
       message: '',
       user_email: this.props.user_email,
-      height: 50
+      height: 60
     }
+    this.state = this.defaultState
     this.addMessage = this.addMessage.bind(this)
-    this.growInput = this.growInput.bind(this)
+    this.updateInputSize = this.updateInputSize.bind(this)
     this.handleChange = this.handleChange.bind(this)
   }
 
   addMessage () {
     this.props.addMessage(this.state)
+    this.setState(this.defaultState)
   }
 
-  growInput () {
+  updateInputSize () {
     return (e) => {
       this.handleChange('height')(e.nativeEvent.contentSize.height)
     }
@@ -38,11 +40,12 @@ class MessageInput extends React.Component {
       <View style={styles.viewContainer}>
         <TextInput
         style={{height: this.state.height, width: '80%'}}
-        placeholder='Enter a message...'
+        placeholder='Aa'
+        value={this.state.message}
         editable={true}
         multiline={true}
         onChangeText={this.handleChange('message')}
-        onContentSizeChange={this.growInput()}/>
+        onContentSizeChange={this.updateInputSize()}/>
         <Button style={styles.sendButton} onPress={this.addMessage} title='Send'></Button>
       </View>
     )

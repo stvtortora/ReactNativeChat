@@ -66,6 +66,7 @@ ChatLog.propTypes = {
       user_email: PropTypes.string.isRequired,
     }).isRequired
   ).isRequired,
+  currentUser: PropTypes.string.isRequired
 }
 
 export default ChatLog
