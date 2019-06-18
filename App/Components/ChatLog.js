@@ -53,7 +53,9 @@ class ChatLog extends React.Component {
       renderItem={this.chatMessage}
       onContentSizeChange={this.handleNewMessage}
       onScrollBeginDrag={() => this.setAtBottomStatus(false)}
+      onMomentumScrollBegin={() => this.setAtBottomStatus(false)}
       onEndReached={() => this.setAtBottomStatus(true)}
+      onEndReachedThreshold={.1}
       />
     )
   }

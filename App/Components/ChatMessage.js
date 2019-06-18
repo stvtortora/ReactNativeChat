@@ -14,18 +14,14 @@ const ChatMessage = ({ chatMessage, isSentMessage, showAvatar }) => {
     return <Image key={0} style={styles.roundedProfileImage} source={{uri: avatarUrl}} />
   }
 
-  const bubble = () => {
-    return (
-      <View key={1} style={[styles.bubble, isSentMessage ? styles.sentBubble : styles.receivedBubble]}>
-        <Text style={styles.text}>{chatMessage.message}</Text>
-      </View>
-    )
-  }
+  const bubble = <View key={1} style={[styles.bubble, isSentMessage ? styles.sentBubble : styles.receivedBubble]}>
+                  <Text style={styles.text}>{chatMessage.message}</Text>
+                 </View>
 
   let viewStyle = styles.receivedMessage
   let components = [
     avatar(),
-    bubble()
+    bubble
   ]
 
   if (isSentMessage) {
@@ -35,9 +31,7 @@ const ChatMessage = ({ chatMessage, isSentMessage, showAvatar }) => {
 
   return (
     <View style={StyleSheet.flatten([styles.viewBox, viewStyle])}>
-      {
-        components.map(component => component)
-      }
+      {components}
     </View>
   )
 }
